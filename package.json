@@ -1,0 +1,24 @@
+{
+  "name": "obeezy-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:aapetsi/obeezy-backend.git",
+  "author": "Apetsi Ampiah & Jerry Otoo",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo No tests added"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2"
+  }
+}
