@@ -7,6 +7,12 @@ const app = express()
 app.use(express.urlencoded({ extended: false }))
 
 // Cors middleware
-app.use(cors)
+app.use(cors())
+
+// routers
+const userRouter = require('./routes/userRouter')
+
+// Use routes
+app.use('/api/users', userRouter)
 
 module.exports = app
