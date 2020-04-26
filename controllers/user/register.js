@@ -5,7 +5,7 @@ const validateRegisterInput = require('../../middleware/validateRegisterInput')
 
 const register = async (req, res) => {
   try {
-    const user = rreq.body
+    const user = req.body
 
     const { errors, isValid } = validateRegisterInput(user)
 
