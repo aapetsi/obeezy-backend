@@ -9,6 +9,7 @@ const app = express()
 connectDB()
 
 // Express middleware
+app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // Cors middleware
