@@ -15,7 +15,7 @@ const register = async (req, res) => {
     const foundUser = await User.findOne({ email: user.email })
     
     // Check for duplicate username
-    const dupUsername = await User.findONe({username: user.username})
+    const dupUsername = await User.findOne({username: user.username})
 
     if (foundUser)
       return res.status(400).json({ email: 'User already exists' })
