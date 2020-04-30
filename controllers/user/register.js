@@ -15,10 +15,10 @@ const register = async (req, res) => {
     const foundUser = await User.findOne({ email: user.email })
 
     if (foundUser)
-      return res.status(400).json({ message: 'User already exists' })
+      return res.status(400).json({ email: 'User already exists' })
 
     if (foundUser && foundUser.username === user.username)
-      return res.status(400).json({ message: 'Username already taken' })
+      return res.status(400).json({ username: 'Username already taken' })
 
     const newUser = new User(user)
     const hash = bcrypt.hashSync(user.password, 10)
